@@ -4,7 +4,8 @@
   "description": "1. 创建一个 VSCode 项目配置文件",
   "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node start.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/geryoung/node-web-demo/issues"
   },
-  "homepage": "https://github.com/geryoung/node-web-demo#readme"
+  "homepage": "https://github.com/geryoung/node-web-demo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
