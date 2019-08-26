@@ -2,7 +2,12 @@ const express = require('express')
 const userRoute = require('./routes/user');
 const logMiddleware = require('./middleware/logger');
 const app = express();
+const logger = require('./logger');
+
 function start() {
+    require('../config');
+    const timeout = require('config').get('timeout');
+    logger.debug(timeout);
     const port = 3000
     app.get('/', (req, res) => res.send('Hello World!'))
     logMiddleware.addLogger(app);
