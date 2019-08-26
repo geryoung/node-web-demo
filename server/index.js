@@ -1,11 +1,9 @@
 const express = require('express')
 const userRoute = require('./routes/user');
 const logMiddleware = require('./middleware/logger');
-
+const app = express();
 function start() {
-    const app = express()
     const port = 3000
-
     app.get('/', (req, res) => res.send('Hello World!'))
     logMiddleware.addLogger(app);
     app.use('/user', userRoute);
@@ -31,3 +29,5 @@ async function start () {
   */
 
   start()
+
+  module.exports = app;

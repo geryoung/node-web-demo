@@ -4,7 +4,8 @@
   "description": "1. 创建一个 VSCode 项目配置文件",
   "main": "test.js",
   "scripts": {
-    "test": "istanbul cover node_modules/mocha/bin/_mocha ./server/test/database/schema --recursive",
+    "test": "mocha ./test --recursive",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha ./server/test/database/schema --recursive",
     "start": "node start.js",
     "mocha": "mocha ./server/test --recursive"
   },
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
   }
 }
