@@ -21,6 +21,7 @@
   "homepage": "https://github.com/geryoung/node-web-demo#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "log4js": "^5.0.0",
     "nedb": "^1.8.0"
   },
   "devDependencies": {

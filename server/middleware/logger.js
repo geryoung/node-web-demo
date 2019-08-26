@@ -1,15 +1,16 @@
 
-function logger(req, res, next) {
+const logger = require('../logger');
+function timeLogger(req, res, next) {
     // function timeLog (req, res, next) {
-    console.log('Time log: ', Date.now())
+    logger.info('Time log: ' + Date.now())
     next()
     //   }
 }
 
-const addLogger = app => {
-    app.use(logger);
+const addTimeLogger = app => {
+    app.use(timeLogger);
 }
 
 module.exports = {
-    addLogger: addLogger
+    addLogger: addTimeLogger
 }
