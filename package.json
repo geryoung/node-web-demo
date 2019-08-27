@@ -23,7 +23,9 @@
     "config": "^3.2.2",
     "express": "^4.17.1",
     "log4js": "^5.0.0",
-    "nedb": "^1.8.0"
+    "nedb": "^1.8.0",
+    "puppeteer": "^1.19.0",
+    "puppeteer-chromium-resolver": "^2.0.1"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
