@@ -18,7 +18,21 @@ function start() {
     app.get('/', (req, res) => res.render('index'))
     logMiddleware.addLogger(app);
     app.use('/user', userRoute);
-    app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+    // app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+    const server = require('http').createServer(app);
+    const io = require('socket.io')(server);
+    io.on('connection', () => { 
+      console.log('on connected');
+
+      io.send('test1111');
+      io.emit('news', 'news data111');
+      setTimeout(function() {
+          io.send('after 3s');
+          io.emit('news', 'news data222');
+        }, 3000)
+      });
+    server.listen(port);
 }
 
 

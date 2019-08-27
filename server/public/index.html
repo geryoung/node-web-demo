@@ -10,4 +10,14 @@
 <body>
     <h1>Home Page Test</h1>
 </body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var socket = io.connect('http://127.0.0.1:3000');
+socket.on('connect', () => {
+    console.log('connected');
+});
+socket.on('news', (data) => {
+    console.log(data);
+});
+</script>
 </html>
