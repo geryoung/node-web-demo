@@ -8,7 +8,8 @@
     "cover": "istanbul cover node_modules/mocha/bin/_mocha ./server/test/database/schema --recursive",
     "start": "node start.js",
     "mocha": "mocha ./server/test --recursive",
-    "webpack": "node_modules/.bin/webpack --config webpack.config.js --watch"
+    "webpack": "node_modules/.bin/webpack --config webpack.config.js --watch",
+    "start:dev" : "node start.js | node_modules/.bin/webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
